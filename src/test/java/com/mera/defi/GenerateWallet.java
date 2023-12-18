@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-Current jittagornp.me
  */
-package me.jittagornp.defi;
+package com.mera.defi;
 
 import lombok.extern.slf4j.Slf4j;
 import org.web3j.crypto.WalletUtils;
@@ -23,6 +23,6 @@ public class GenerateWallet {
             directory.mkdirs();
         }
         final String outputFile = WalletUtils.generateNewWalletFile(WALLET_PASSWORD, directory);
-        log.info("Output file => {}", outputFile);
+        log.info("Output file => {}", directory);
     }
 }

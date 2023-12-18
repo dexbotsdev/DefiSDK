@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-Current jittagornp.me
  */
-package me.jittagornp.defi.model;
+package com.mera.defi.model;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,7 +1,7 @@
 /*
  * Copyright 2021-Current jittagornp.me
  */
-package me.jittagornp.defi.exception;
+package com.mera.defi.exception;
 
 import org.web3j.protocol.core.Response;
 

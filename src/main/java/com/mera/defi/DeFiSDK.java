@@ -1,17 +1,17 @@
 /*
  * Copyright 2021-Current jittagornp.me
  */
-package me.jittagornp.defi;
+package com.mera.defi;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mera.defi.model.TokenInfo;
 import io.reactivex.disposables.Disposable;
 import lombok.extern.slf4j.Slf4j;
-import me.jittagornp.defi.exception.ResponseErrorException;
-import me.jittagornp.defi.model.TokenInfo;
-import me.jittagornp.defi.smartcontract.ERC20;
-import me.jittagornp.defi.smartcontract.Router;
-import me.jittagornp.defi.smartcontract.Wrapped;
+import com.mera.defi.exception.ResponseErrorException;
+import com.mera.defi.smartcontract.ERC20;
+import com.mera.defi.smartcontract.Router;
+import com.mera.defi.smartcontract.Wrapped;
 import org.web3j.crypto.Credentials;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.DefaultBlockParameterName;
@@ -79,9 +79,9 @@ public class DeFiSDK implements DeFi {
             return polygonMainnet(credentials);
         }
 
-        if (network == Network.BITKUB_MAINNET) {
-            return bitkubMainnet(credentials);
-        }
+      if (network == Network.FTM_MAINNET) {
+        return fantomNet(credentials);
+      }
 
         throw new UnsupportedOperationException("Unsupported network " + network);
     }
@@ -94,8 +94,8 @@ public class DeFiSDK implements DeFi {
         return new DeFiSDK(Network.POLYGON_MAINNET, credentials);
     }
 
-    public static DeFiSDK bitkubMainnet(final Credentials credentials) {
-        return new DeFiSDK(Network.BITKUB_MAINNET, credentials);
+    public static DeFiSDK fantomNet(final Credentials credentials) {
+      return new DeFiSDK(Network.FTM_MAINNET, credentials);
     }
 
     @Override

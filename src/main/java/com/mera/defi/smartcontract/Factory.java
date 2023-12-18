@@ -1,4 +1,4 @@
-package me.jittagornp.defi.smartcontract;
+package com.mera.defi.smartcontract;
 
 import io.reactivex.Flowable;
 import io.reactivex.functions.Function;
@@ -30,7 +30,7 @@ import org.web3j.tx.gas.ContractGasProvider;
  * <p>Auto generated code.
  * <p><strong>Do not modify!</strong>
  * <p>Please use the <a href="https://docs.web3j.io/command_line.html">web3j command line tools</a>,
- * or the org.web3j.codegen.SolidityFunctionWrapperGenerator in the 
+ * or the org.web3j.codegen.SolidityFunctionWrapperGenerator in the
  * <a href="https://github.com/web3j/web3j/tree/master/codegen">codegen module</a> to update.
  *
  * <p>Generated with web3j version 1.4.1.
@@ -57,7 +57,7 @@ public class Factory extends Contract {
 
     public static final String FUNC_SETFEETOSETTER = "setFeeToSetter";
 
-    public static final Event PAIRCREATED_EVENT = new Event("PairCreated", 
+    public static final Event PAIRCREATED_EVENT = new Event("PairCreated",
             Arrays.<TypeReference<?>>asList(new TypeReference<Address>(true) {}, new TypeReference<Address>(true) {}, new TypeReference<Address>() {}, new TypeReference<Uint256>() {}));
     ;
 
@@ -117,51 +117,51 @@ public class Factory extends Contract {
     }
 
     public RemoteFunctionCall<byte[]> INIT_CODE_PAIR_HASH() {
-        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_INIT_CODE_PAIR_HASH, 
-                Arrays.<Type>asList(), 
+        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_INIT_CODE_PAIR_HASH,
+                Arrays.<Type>asList(),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Bytes32>() {}));
         return executeRemoteCallSingleValueReturn(function, byte[].class);
     }
 
     public RemoteFunctionCall<String> allPairs(BigInteger a) {
-        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_ALLPAIRS, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Uint256(a)), 
+        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_ALLPAIRS,
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Uint256(a)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
 
     public RemoteFunctionCall<BigInteger> allPairsLength() {
-        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_ALLPAIRSLENGTH, 
-                Arrays.<Type>asList(), 
+        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_ALLPAIRSLENGTH,
+                Arrays.<Type>asList(),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}));
         return executeRemoteCallSingleValueReturn(function, BigInteger.class);
     }
 
     public RemoteFunctionCall<TransactionReceipt> createPair(String tokenA, String tokenB) {
         final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(
-                FUNC_CREATEPAIR, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, tokenA), 
-                new org.web3j.abi.datatypes.Address(160, tokenB)), 
+                FUNC_CREATEPAIR,
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, tokenA),
+                new org.web3j.abi.datatypes.Address(160, tokenB)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteFunctionCall<String> feeTo() {
-        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_FEETO, 
-                Arrays.<Type>asList(), 
+        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_FEETO,
+                Arrays.<Type>asList(),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
 
     public RemoteFunctionCall<String> feeToSetter() {
-        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_FEETOSETTER, 
-                Arrays.<Type>asList(), 
+        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_FEETOSETTER,
+                Arrays.<Type>asList(),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
 
     public RemoteFunctionCall<String> getPair(String a, String b) {
-        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_GETPAIR, 
+        final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(FUNC_GETPAIR,
                 Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, a),
                 new org.web3j.abi.datatypes.Address(160, b)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
@@ -170,16 +170,16 @@ public class Factory extends Contract {
 
     public RemoteFunctionCall<TransactionReceipt> setFeeTo(String _feeTo) {
         final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(
-                FUNC_SETFEETO, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, _feeTo)), 
+                FUNC_SETFEETO,
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, _feeTo)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteFunctionCall<TransactionReceipt> setFeeToSetter(String _feeToSetter) {
         final org.web3j.abi.datatypes.Function function = new org.web3j.abi.datatypes.Function(
-                FUNC_SETFEETOSETTER, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, _feeToSetter)), 
+                FUNC_SETFEETOSETTER,
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(160, _feeToSetter)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }

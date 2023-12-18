@@ -1,12 +1,12 @@
 /*
  * Copyright 2021-Current jittagornp.me
  */
-package me.jittagornp.defi;
+package com.mera.defi;
 
+import com.mera.defi.model.TokenInfo;
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
-import me.jittagornp.defi.model.TokenInfo;
 import org.web3j.protocol.core.methods.response.EthBlock;
 import org.web3j.protocol.core.methods.response.Log;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
@@ -33,6 +33,14 @@ public interface DeFi {
                 "BNB",
                 "https://bscscan.com"
         ),
+      FTM_MAINNET(
+        "FANTOM CHAIN",
+        250L,
+        "https://rpc.ftm.tools/",
+        "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83", //WFTM
+        "BNB",
+        "https://FTMSCAN.com"
+      ),
         POLYGON_MAINNET(
                 "Polygon (PoS) Chain",
                 137L,
